@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Api\\GT.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Api\\GT.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Api\\GT.Api.csproj",
+        "projectName": "GT.Api",
+        "projectPath": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Api\\GT.Api.csproj",
+        "packagesPath": "C:\\Users\\beatriz.novaes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\beatriz.novaes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.mstech.com.br/nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.mstech.com.br/repository/nuget.org": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Application\\GT.Application.csproj": {
+                "projectPath": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Application\\GT.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Application\\GT.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Application\\GT.Application.csproj",
+        "projectName": "GT.Application",
+        "projectPath": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Application\\GT.Application.csproj",
+        "packagesPath": "C:\\Users\\beatriz.novaes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\beatriz.novaes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.mstech.com.br/nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.mstech.com.br/repository/nuget.org": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Domain\\GT.Domain.csproj": {
+                "projectPath": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Domain\\GT.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Domain\\GT.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Domain\\GT.Domain.csproj",
+        "projectName": "GT.Domain",
+        "projectPath": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Domain\\GT.Domain.csproj",
+        "packagesPath": "C:\\Users\\beatriz.novaes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\beatriz.novaes\\OneDrive\\Estudos\\Gerenciador-de-Atividades\\GT.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\beatriz.novaes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.mstech.com.br/nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.mstech.com.br/repository/nuget.org": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
