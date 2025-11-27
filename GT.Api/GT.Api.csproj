@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GT.Application\GT.Application.csproj" />
+    <ProjectReference Include="..\GT.Infra\GT.Infra.csproj" />
   </ItemGroup>
 
 </Project>
