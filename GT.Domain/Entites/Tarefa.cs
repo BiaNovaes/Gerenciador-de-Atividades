@@ -1,4 +1,4 @@
-using GT.Infra.enum;
+using GT.Domain.Enums;
 
 namespace GT.Domain.Entites
 {
@@ -11,16 +11,5 @@ namespace GT.Domain.Entites
         public DateTime DataCriacao { get; set; }
         public int UsuarioId { get; set; }
         public User Usuario { get; set; }
-
-        public Tarefa() { }
-
-        public Tarefa(string titulo, string descricao, TarefaEnum status, int usuarioId)
-        {
-            Titulo = titulo;
-            Descricao = descricao;
-            Status = status;
-            UsuarioId = usuarioId;
-            DataCriacao = DateTime.UtcNow;
-        }
     }
 }

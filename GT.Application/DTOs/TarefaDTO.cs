@@ -1,5 +1,4 @@
-using GT.Domain.Entites;
-using GT.Infra.enum;
+using GT.Domain.Enums;
 
 namespace GT.Application.DTOs;
 

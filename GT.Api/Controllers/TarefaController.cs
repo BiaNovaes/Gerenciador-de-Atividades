@@ -1,4 +1,4 @@
-using GT.Infra.enum;
+using GT.Domain.Enums;
 using Microsoft.AspNetCore.Mvc;
 using GT.Domain.Entites;
 using GT.Domain.Interfaces;

@@ -3,3 +3,10 @@ C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\ob
 C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net6.0\GT.Domain.AssemblyInfo.cs
 C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net6.0\GT.Domain.csproj.CoreCompileInputs.cache
 C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net6.0\GT.Domain.sourcelink.json
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\bin\Debug\net6.0\GT.Domain.deps.json
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\bin\Debug\net6.0\GT.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\bin\Debug\net6.0\GT.Domain.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net6.0\GT.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net6.0\refint\GT.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net6.0\GT.Domain.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net6.0\ref\GT.Domain.dll

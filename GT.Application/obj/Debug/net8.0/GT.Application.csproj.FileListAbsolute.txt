@@ -1,0 +1,16 @@
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\bin\Debug\net8.0\GT.Application.deps.json
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\bin\Debug\net8.0\GT.Application.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\bin\Debug\net8.0\GT.Application.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\bin\Debug\net8.0\GT.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\bin\Debug\net8.0\GT.Domain.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\GT.Application.csproj.AssemblyReference.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\GT.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\GT.Application.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\GT.Application.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\GT.Application.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\GT.Application.sourcelink.json
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\GT.Appli.BFDC9CA3.Up2Date
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\GT.Application.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\refint\GT.Application.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\GT.Application.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Application\obj\Debug\net8.0\ref\GT.Application.dll

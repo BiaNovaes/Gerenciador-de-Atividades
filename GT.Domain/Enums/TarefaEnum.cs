@@ -1,4 +1,4 @@
-namespace GT.Infra.enum
+namespace GT.Domain.Enums
 {
     public enum TarefaEnum
     {

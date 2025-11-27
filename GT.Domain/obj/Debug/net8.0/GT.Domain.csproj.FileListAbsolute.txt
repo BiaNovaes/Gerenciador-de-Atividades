@@ -1,0 +1,12 @@
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\bin\Debug\net8.0\GT.Domain.deps.json
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\bin\Debug\net8.0\GT.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\bin\Debug\net8.0\GT.Domain.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net8.0\GT.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net8.0\GT.Domain.AssemblyInfoInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net8.0\GT.Domain.AssemblyInfo.cs
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net8.0\GT.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net8.0\GT.Domain.sourcelink.json
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net8.0\GT.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net8.0\refint\GT.Domain.dll
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net8.0\GT.Domain.pdb
+C:\Users\gabri\OneDrive\Área de Trabalho\Gerenciador-de-Atividades\GT.Domain\obj\Debug\net8.0\ref\GT.Domain.dll

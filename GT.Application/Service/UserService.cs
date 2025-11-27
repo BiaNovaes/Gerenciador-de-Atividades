@@ -1,6 +1,5 @@
 using GT.Domain.Entites;
-using GT.Domain.Interfaces;
-using BCrypt.Net;                     
+using GT.Domain.Interfaces;                
 
 namespace GT.Application.Service
 {
