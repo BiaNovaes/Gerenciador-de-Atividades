@@ -10,6 +10,6 @@ namespace GT.Domain.Entites
         public TarefaEnum Status { get; set; }
         public DateTime DataCriacao { get; set; }
         public int UsuarioId { get; set; }
-        public User Usuario { get; set; }
+        public User? Usuario { get; set; }
     }
 }

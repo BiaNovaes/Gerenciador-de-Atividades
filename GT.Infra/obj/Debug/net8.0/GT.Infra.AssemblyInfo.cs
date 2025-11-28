@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GT.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17ec1d400030f4efd5c8fd0893667a303846db8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3a54a7ed9f559c01fc7c4b0262319bdc1bb03db")]
 [assembly: System.Reflection.AssemblyProductAttribute("GT.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GT.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

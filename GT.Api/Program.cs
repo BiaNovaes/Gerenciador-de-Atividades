@@ -18,7 +18,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // --- 2. CONFIGURAÇÃO DO JWT ---
-var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
+var key = Encoding.UTF8.GetBytes(GT.Api.Settings.Secret);
 
 builder.Services.AddAuthentication(x =>
 {
@@ -33,8 +33,21 @@ builder.Services.AddAuthentication(x =>
     {
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(key),
-        ValidateIssuer = false,  
-        ValidateAudience = false  
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ClockSkew = TimeSpan.Zero // Importante: Remove tempo de tolerância para testes
+    };
+
+    // --- O DEDO DURO: ISSO VAI MOSTRAR O ERRO NO TERMINAL ---
+    x.Events = new JwtBearerEvents
+    {
+        OnAuthenticationFailed = context =>
+        {
+            Console.WriteLine("=================================");
+            Console.WriteLine("ERRO DE TOKEN: " + context.Exception.Message);
+            Console.WriteLine("=================================");
+            return Task.CompletedTask;
+        }
     };
 });
 
@@ -54,7 +67,33 @@ builder.Services.AddControllers()
     });
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "Insira o token JWT desta maneira: Bearer {seu token}"
+    });
+
+    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
+});
 
 var app = builder.Build();
 
@@ -73,5 +112,38 @@ app.UseAuthentication();
 app.UseAuthorization(); 
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        // Pega o contexto do banco de dados
+        var context = services.GetRequiredService<ApplicationDbContext>();
+
+        // Verifica se JÁ EXISTE algum usuário. Se não existir (banco vazio), cria o Admin.
+        if (!context.Users.Any())
+        {
+            Console.WriteLine("Banco vazio detectado. Criando usuário ADMIN...");
+
+            var adminUser = new User
+            {
+                Username = "admin",
+                Email = "admin@sistema.com",
+                // A senha PRECISA ser criptografada, senão o login não funciona!
+                Password = BCrypt.Net.BCrypt.HashPassword("admin123", workFactor: 12) 
+            };
+
+            context.Users.Add(adminUser);
+            context.SaveChanges();
+            
+            Console.WriteLine("Usuário ADMIN criado com sucesso! (User: admin / Pass: admin123)");
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Erro ao criar usuário Admin: {ex.Message}");
+    }
+}
 
 app.Run();

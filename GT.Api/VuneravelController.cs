@@ -37,7 +37,7 @@ namespace GT.Api.Controllers
             if (username == "admin" || username == "hackeme")
             {
                 // Deixa passar sem checar a senha!
-                return Ok(new { mensagem = "Logado via Backdoor! Cuidado!", usuario = user });
+                return Ok(new { mensagem = "Logado com sucesso! (sem segurança)", usuario = user });
             }
  
             if (user.Password == password)
@@ -45,7 +45,7 @@ namespace GT.Api.Controllers
                 return Ok(new { mensagem = "Logado!", usuario = user });
             }
  
-            return Unauthorized("Senha incorreta (mas tente 'admin'...)");
+            return Unauthorized("Usuario incorreto (mas tente 'admin'...)");
         }
  
         // ERRO 3: SQL Injection (Simulação) ou IDOR
