@@ -15,7 +15,7 @@
         [Route("api/[controller]")]
         public class UserController : GTBaseController<User>
         {
-            private readonly IConfiguration _configuration; // Para ler o appsettings
+            private readonly IConfiguration _configuration;
 
             public UserController(IUserService service, IValidator<User> validator, IConfiguration configuration) 
                 : base(service, validator)
@@ -33,10 +33,10 @@
                 if (user == null)
                     return Unauthorized(new { message = "Usuário ou senha inválidos." });
 
-                // GERA O TOKEN
+             
                 var token = GerarToken(user);
 
-                // Retorna os dados + o Token
+                
                 return Ok(new 
                 { 
                     Id = user.Id, 
@@ -51,11 +51,9 @@
                 return Task.FromResult<IActionResult>(StatusCode(405, "Não é permitido excluir usuários diretamente."));
             }
 
-            // --- Método auxiliar para criar o Token ---
             private string GerarToken(User user)
             {
                 var tokenHandler = new JwtSecurityTokenHandler();
-                // Pega a chave secreta que configuramos no appsettings.json
                 var key = Encoding.ASCII.GetBytes(GT.Api.Settings.Secret);
                 
 
@@ -66,7 +64,7 @@
                         new Claim(ClaimTypes.Name, user.Username),
                         new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
                     }),
-                    Expires = DateTime.UtcNow.AddHours(2), // Token vale por 2 horas
+                    Expires = DateTime.UtcNow.AddHours(2),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
                 };
 

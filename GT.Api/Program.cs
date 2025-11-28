@@ -35,10 +35,9 @@ builder.Services.AddAuthentication(x =>
         IssuerSigningKey = new SymmetricSecurityKey(key),
         ValidateIssuer = false,
         ValidateAudience = false,
-        ClockSkew = TimeSpan.Zero // Importante: Remove tempo de tolerância para testes
+        ClockSkew = TimeSpan.Zero
     };
 
-    // --- O DEDO DURO: ISSO VAI MOSTRAR O ERRO NO TERMINAL ---
     x.Events = new JwtBearerEvents
     {
         OnAuthenticationFailed = context =>
@@ -51,7 +50,7 @@ builder.Services.AddAuthentication(x =>
     };
 });
 
-// --- 3. INJEÇÃO DE DEPENDÊNCIAS ---
+
 builder.Services.AddScoped<IBaseRepository<User>, UserRepository>();
 builder.Services.AddScoped<IBaseRepository<Tarefa>, TarefaRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -59,7 +58,7 @@ builder.Services.AddScoped<ITarefaService, TarefaService>();
 builder.Services.AddScoped<IValidator<User>, UserValidator>();
 builder.Services.AddScoped<IValidator<Tarefa>, TarefaValidator>();
 
-// Configura Controllers e validação
+
 builder.Services.AddControllers()
     .AddFluentValidation(config => 
     {
@@ -97,7 +96,6 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// --- 4. PIPELINE DE EXECUÇÃO ---
 
 if (app.Environment.IsDevelopment())
 {
@@ -118,10 +116,8 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     try
     {
-        // Pega o contexto do banco de dados
         var context = services.GetRequiredService<ApplicationDbContext>();
 
-        // Verifica se JÁ EXISTE algum usuário. Se não existir (banco vazio), cria o Admin.
         if (!context.Users.Any())
         {
             Console.WriteLine("Banco vazio detectado. Criando usuário ADMIN...");
@@ -130,7 +126,6 @@ using (var scope = app.Services.CreateScope())
             {
                 Username = "admin",
                 Email = "admin@sistema.com",
-                // A senha PRECISA ser criptografada, senão o login não funciona!
                 Password = BCrypt.Net.BCrypt.HashPassword("admin123", workFactor: 12) 
             };
 

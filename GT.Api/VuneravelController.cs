@@ -15,8 +15,8 @@ namespace GT.Api.Controllers
             _userRepository = userRepository;
         }
  
-        // ERRO 1: Vazamento de Dados Sensíveis (Sensitive Data Exposure)
-        // Esse endpoint retorna TUDO do usuário, incluindo a senha criptografada.
+        // ERRO 1: Vazamento de Dados Sensíveis
+        // Esse endpoint retorna TUDO do usuário, incluindo a senha criptografada
         [HttpGet("usuarios-expostos")]
         public async Task<IActionResult> GetUsuariosComSenha()
         {
@@ -24,8 +24,8 @@ namespace GT.Api.Controllers
             return Ok(users);
         }
  
-        // ERRO 2: Autenticação Quebrada (Broken Authentication)
-        // se o usuário digitar "admin" no nome, ele entra com QUALQUER senha.
+        // ERRO 2: Autenticação Quebrada
+        // se o usuário digitar "admin" no nome, ele entra com QUALQUER senha
         [HttpPost("login-inseguro")]
         public async Task<IActionResult> LoginInseguro(string username, string password)
         {
@@ -36,7 +36,6 @@ namespace GT.Api.Controllers
  
             if (username == "admin" || username == "hackeme")
             {
-                // Deixa passar sem checar a senha!
                 return Ok(new { mensagem = "Logado com sucesso! (sem segurança)", usuario = user });
             }
  
@@ -48,9 +47,8 @@ namespace GT.Api.Controllers
             return Unauthorized("Usuario incorreto (mas tente 'admin'...)");
         }
  
-        // ERRO 3: SQL Injection (Simulação) ou IDOR
-        // Aqui permitimos deletar um usuário apenas passando o ID na URL,
-        // sem verificar se quem está pedindo tem permissão de administrador.
+        // ERRO 3: SQL Injection
+        // Aqui permitimos deletar um usuário apenas passando o ID
         [HttpDelete("deletar-sem-permissao/{id}")]
         public async Task<IActionResult> DeletarQualquerUm(int id)
         {
